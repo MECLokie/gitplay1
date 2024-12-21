@@ -246,7 +246,8 @@ git show v1.0.0
 #We just see the commit object
 
 #These are lightweight tags. There is also an annotated type which is a full object with its own message
-git tag -a v0.0.1 <commit hash> -m "First version"
+# git tag -a v0.0.1 <commit hash> -m "First version"
+git tag -a v0.0.1 71989c0 -m "First version"
 git show v0.0.1
 #we see the TAG information AND then the commit it references
 git cat-file -t v0.0.1
@@ -270,6 +271,11 @@ git remote -v
 #Add it as the remote origin. Origin is just a name but common standard
 git remote add origin https://github.com/johnthebrit/gitplay1
 #git branch -M main      # RENAMES the branch from master to main
+
+# Pulled from my own github
+git remote add origin https://github.com/MECLokie/gitplay1.git
+git branch -M main # Don't need to do this as we're already set for main
+git push -u origin main
 
 git remote -v
 gitgraph
